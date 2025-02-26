@@ -1,6 +1,5 @@
 package Helloworld;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class compras {
@@ -9,7 +8,6 @@ public class compras {
 		// 
 		
 		Scanner sc = new Scanner(System.in);
-		DecimalFormat df = new DecimalFormat("#.##");
 		
 		System.out.println("informe o valor da sua compra: ");
 		
@@ -25,14 +23,14 @@ public class compras {
 	
 		case 1:
 			double valorFinal = valorCompra * 0.9;
-			System.out.println(df.format("Sua compra ficou R$:" + valorFinal));
+			System.out.println("Sua compra ficou R$:" + valorFinal);
 			break;
 		case 2:
 			 valorFinal = valorCompra * 0.95;
-			 System.out.println(df.format("Sua Compra ficou R$:" + valorFinal));
+			 System.out.printf("Sua Compra ficou R$: %.2f", valorFinal);
 			 break;
 		case 3: 
-			System.out.println(df.format("Sua compra ficou R$" + valorCompra));
+			System.out.printf("Sua compra ficou R$: %.2f", valorCompra);
 			
 			System.out.println("metodos de pagamento ");
 			System.out.println("1 - À Vista");
@@ -44,17 +42,17 @@ public class compras {
 			
 			case 1:
 				double finalCredito = valorCompra;
-				System.out.println(df.format("Sua compra é de: R$" + finalCredito));
+				System.out.println("Sua compra é de: R$" + finalCredito);
 				break;
 			
 			case 2:
 				finalCredito = valorCompra * 1.05;
-				System.out.println(df.format("Sua compra é de: R$" + finalCredito));
+				System.out.printf("Sua compra é de: R$ %.2f", finalCredito);
 				break;
 				
 			case 3:
 				finalCredito = valorCompra * 1.1;
-				System.out.println(df.format("Sua compra é de: R$" + finalCredito));
+				System.out.printf("Sua compra é de: R$ %.2f", finalCredito);
 				break;
 			
 			default :
