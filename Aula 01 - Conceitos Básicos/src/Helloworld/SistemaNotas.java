@@ -22,11 +22,25 @@ public class SistemaNotas {
 		
 		double media = (nota1 + nota2 + nota3)/3;
 		
+		System.out.println("A média do aluno é: " + media);
+		
 		if (media >= 7) {
 			System.out.println("Aprovado");
 		}
 		else if(media >= 5) {
 			System.out.println("Exame");
+			System.out.println("O aluno está de exame, digite a nota da prova: ");
+			
+			double notaexame = sc.nextDouble();
+			double MediaFinal = (media + notaexame)/2;
+			
+			if (MediaFinal >=7) {
+				System.out.println("Aprovado, sua média foi de: " + MediaFinal);
+			}
+			else {
+				System.out.println("Reprovado, sua média foi de: " + MediaFinal);
+			}
+			
 		}
 		else{
 			System.out.println("Reprovado");
